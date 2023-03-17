@@ -1,4 +1,6 @@
-import { Component, h, State, Element } from '@stencil/core';
+import { Component, h, State, Element, Prop } from '@stencil/core';
+import { translations } from './translations';
+
 
 @Component({
   tag: 'color-contrast-checker',
@@ -7,20 +9,42 @@ import { Component, h, State, Element } from '@stencil/core';
 })
 export class ColorContrastChecker {
   @Element() private host: HTMLElement;
-
-  @State() color1: string = '#000000';
-  @State() color2: string = '#ffffff';
+  @Prop() language: 'en' | 'de' | 'it' | 'fr' = 'en';
+  @State() color1: string = '#EB0000';
+  @State() color2: string = '#FFFFFF';
 
   private colorOptions: { name: string; value: string }[] = [
+    { name: 'Red', value: '#EB0000' },
+    { name: 'Red125', value: '#C60018' },
+    { name: 'Red150', value: '#C60018' },
+    { name: 'White', value: '#FFFFFF' },
+    { name: 'Milk', value: '#F6F6F6' },
+    { name: 'Cloud', value: '#E5E5E5' },
+    { name: 'Silver', value: '#DCDCDC' },
+    { name: 'Aluminum', value: '#D2D2D2' },
+    { name: 'Platinum', value: '#CDCDCD' },
+    { name: 'Cement', value: '#BDBDBD' },
+    { name: 'Graphite', value: '#B7B7B7' },
+    { name: 'Storm', value: '#A8A8A8' },
+    { name: 'Smoke', value: '#8D8D8D' },
+    { name: 'Metal', value: '#767676' },
+    { name: 'Granite', value: '#686868' },
+    { name: 'Anthracite', value: '#5A5A5A' },
+    { name: 'Iron', value: '#444444' },
+    { name: 'Charcoal', value: '#212121' },
+    { name: 'Midnight', value: '#151515' },
     { name: 'Black', value: '#000000' },
-    { name: 'White', value: '#ffffff' },
-    { name: 'Red', value: '#ff0000' },
-    { name: 'Green', value: '#00ff00' },
-    { name: 'Blue', value: '#0000ff' },
-    { name: 'Yellow', value: '#ffff00' },
-    { name: 'Cyan', value: '#00ffff' },
-    { name: 'Magenta', value: '#ff00ff' },
-    { name: 'Purple', value: '#800080' },
+    { name: 'Blue', value: '#2d327d' },
+    { name: 'Sky', value: '#0079C7' },
+    { name: 'Night', value: '#143A85' },
+    { name: 'Violet', value: '#6F2282' },
+    { name: 'Autumn', value: '#E84E10' },
+    { name: 'Orange', value: '#F27E00' },
+    { name: 'Peach', value: '#FCBB00' },
+    { name: 'Lemon', value: '#FFDE15' },
+    { name: 'Brown', value: '#B76000' },
+    { name: 'Green', value: '#00973B' },
+    { name: 'Turquoise', value: '#00A59B' },
   ];
 
   componentDidLoad() {
@@ -46,25 +70,34 @@ export class ColorContrastChecker {
   }
 
   private getWCAGCompliance(contrastRatio: number): string {
-    if (contrastRatio >= 7) {
-      return 'AAA';
-    } else if (contrastRatio >= 4.5) {
-      return 'AA';
-    } else if (contrastRatio >= 3) {
-      return 'A';
-    } else {
-      return 'Fail';
-    }
+    const aaNormal = contrastRatio >= 4.5;
+    const aaLarge = contrastRatio >= 3;
+    const aaaNormal = contrastRatio >= 7;
+    const aaaLarge = contrastRatio >= 4.5;
+  
+    const t = translations[this.language];
+  
+    let result = `${t.levelAA} `;
+  
+    result += aaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
+    result += aaLarge ? `${t.passLargeText}; ` : `${t.failLargeText}; `;
+    result += `${t.levelAAA} `;
+    result += aaaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
+    result += aaaLarge ? `${t.passLargeText}` : `${t.failLargeText}`;
+  
+    return result;
   }
+  
 
   render() {
     const contrastRatio = this.calculateContrastRatio(this.color1, this.color2);
     const wcagCompliance = this.getWCAGCompliance(contrastRatio);
+    const t = translations[this.language];
   
     return (
       <div class="container">
         <div>
-          <label htmlFor="color1">Color 1:</label>
+        <label htmlFor="color1">{t.color1Label}</label>
           <select
             id="color1"
             onInput={(e: any) => {
@@ -77,7 +110,7 @@ export class ColorContrastChecker {
           </select>
         </div>
         <div>
-          <label htmlFor="color2">Color 2:</label>
+        <label htmlFor="color2">{t.color2Label}</label>
           <select
             id="color2"
             onInput={(e: any) => {
@@ -95,10 +128,10 @@ export class ColorContrastChecker {
         </div>
         <div>
           <p>
-            Contrast Ratio: {contrastRatio.toFixed(2)}:1
+          {t.contrastRatio} {contrastRatio.toFixed(2)}:1
           </p>
           <p>
-            WCAG Compliance: {wcagCompliance}
+          {t.wcagCompliance} {wcagCompliance}
           </p>
         </div>
       </div>

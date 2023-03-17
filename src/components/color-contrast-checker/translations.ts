@@ -1,0 +1,26 @@
+export const translations = {
+  en: {
+    color1Label: 'Color 1:',
+    color2Label: 'Color 2:',
+    contrastRatio: 'Contrast Ratio:',
+    wcagCompliance: 'WCAG Compliance:',
+    passSmallText: 'Pass (small text)',
+    passLargeText: 'Pass (large text)',
+    failSmallText: 'Fail (small text)',
+    failLargeText: 'Fail (large text)',
+    levelAA: 'Level AA:',
+    levelAAA: 'Level AAA:',
+  },
+  de: {
+    color1Label: 'Farbe 1:',
+    color2Label: 'Farbe 2:',
+    contrastRatio: 'Kontrastverhältnis:',
+    wcagCompliance: 'WCAG-Konformität:',
+    passSmallText: 'Bestanden (kleiner Text)',
+    passLargeText: 'Bestanden (großer Text)',
+    failSmallText: 'Nicht bestanden (kleiner Text)',
+    failLargeText: 'Nicht bestanden (großer Text)',
+    levelAA: 'Stufe AA:',
+    levelAAA: 'Stufe AAA:',
+  },
+};

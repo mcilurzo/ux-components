@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ColorContrastChecker {
+        "language": 'en' | 'de' | 'it' | 'fr';
     }
     interface MyComponent {
         /**
@@ -43,6 +44,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ColorContrastChecker {
+        "language"?: 'en' | 'de' | 'it' | 'fr';
     }
     interface MyComponent {
         /**
