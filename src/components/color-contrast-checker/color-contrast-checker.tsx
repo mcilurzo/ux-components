@@ -1,10 +1,9 @@
 import { Component, h, State, Element, Prop } from '@stencil/core';
 import { translations } from './translations';
 
-
 @Component({
   tag: 'color-contrast-checker',
-  styleUrl: 'color-contrast-checker.css',
+  styleUrl: 'color-contrast-checker.scss',
   shadow: true,
 })
 export class ColorContrastChecker {
@@ -77,11 +76,11 @@ export class ColorContrastChecker {
   
     const t = translations[this.language];
   
-    let result = `${t.levelAA} `;
+    let result = `${t.levelAA}`;
   
     result += aaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
     result += aaLarge ? `${t.passLargeText}; ` : `${t.failLargeText}; `;
-    result += `${t.levelAAA} `;
+    result += `${t.levelAAA}`;
     result += aaaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
     result += aaaLarge ? `${t.passLargeText}` : `${t.failLargeText}`;
   
@@ -127,12 +126,13 @@ export class ColorContrastChecker {
           <div class="color-box" style={{ backgroundColor: this.color2 }}></div>
         </div>
         <div>
-          <p>
+          <p class="contrast-ratio">
           {t.contrastRatio} {contrastRatio.toFixed(2)}:1
           </p>
-          <p>
-          {t.wcagCompliance} {wcagCompliance}
-          </p>
+          <div class="wcag-compliance">
+            <p>{t.wcagCompliance}</p>
+            <p>{wcagCompliance}</p>
+          </div>
         </div>
       </div>
     );

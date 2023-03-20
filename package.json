@@ -26,7 +26,10 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@sbb-esta/lyne-components": "^0.28.4",
+    "@sbb-esta/lyne-design-tokens": "^0.3.4",
+    "@stencil/core": "^3.0.0",
+    "@stencil/sass": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
