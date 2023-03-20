@@ -134,6 +134,9 @@ export class ColorContrastChecker {
             <p>{wcagCompliance}</p>
           </div>
         </div>
+        <sbb-button variant="secondary" href="/de/design-system/how-to-use-the-design-system/">
+          Test
+        </sbb-button>
       </div>
     );
   }
