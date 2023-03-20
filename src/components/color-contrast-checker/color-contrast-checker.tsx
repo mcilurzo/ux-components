@@ -115,30 +115,37 @@ export class ColorContrastChecker {
           </sbb-form-field>
           <div class="color-box" style={{ backgroundColor: this.color2 }}></div>
         </div>
+        <div class="contrast-ratio">
+          {contrastRatio.toFixed(2)}:1
+        </div>
         <div class="wcag-compliance">
-          <p class="contrast-ratio">
-          {t.contrastRatio} {contrastRatio.toFixed(2)}:1
-          </p>
-          <div class="wcag-levels">
+          
+          
           <div class="wcag-level">
             <div>{t.levelAA}</div>
-            <div class={wcagCompliance.aaNormal ? 'pass' : 'fail'}>
-              {wcagCompliance.aaNormal ? t.passSmallText : t.failSmallText}
+            <div class={wcagCompliance.aaNormal ? 'result pass' : 'result fail'}>
+              <div class="icon">{wcagCompliance.aaNormal ? <sbb-icon name="circle-tick-small"></sbb-icon> : <sbb-icon name="circle-cross-small"></sbb-icon>}</div>
+              <p>{wcagCompliance.aaNormal ? t.passSmallText : t.failSmallText}</p>
             </div>
-            <div class={wcagCompliance.aaLarge ? 'pass' : 'fail'}>
-              {wcagCompliance.aaLarge ? t.passLargeText : t.failLargeText}
+            <div class={wcagCompliance.aaLarge ? 'result pass' : 'result fail'}>
+              <div class="icon">{wcagCompliance.aaLarge ? <sbb-icon name="circle-tick-small"></sbb-icon> : <sbb-icon name="circle-cross-small"></sbb-icon>}</div>
+              <p>{wcagCompliance.aaLarge ? t.passLargeText : t.failLargeText}</p>
+              
+              
             </div>
           </div>
           <div class="wcag-level">
             <div>{t.levelAAA}</div>
-            <div class={wcagCompliance.aaaNormal ? 'pass' : 'fail'}>
-              {wcagCompliance.aaaNormal ? t.passSmallText : t.failSmallText}
+            <div class={wcagCompliance.aaaNormal ? 'result pass' : 'result fail'}>
+            <div class="icon">{wcagCompliance.aaaNormal ? <sbb-icon name="circle-tick-small"></sbb-icon> : <sbb-icon name="circle-cross-small"></sbb-icon>}</div>
+            <p>{wcagCompliance.aaaNormal ? t.passSmallText : t.failSmallText}</p>
             </div>
-            <div class={wcagCompliance.aaaLarge ? 'pass' : 'fail'}>
-              {wcagCompliance.aaaLarge ? t.passLargeText : t.failLargeText}
+            <div class={wcagCompliance.aaaLarge ? 'result pass' : 'result fail'}>
+            <div class="icon">{wcagCompliance.aaaLarge ? <sbb-icon name="circle-tick-small"></sbb-icon> : <sbb-icon name="circle-cross-small"></sbb-icon>}</div>
+            <p>{wcagCompliance.aaaLarge ? t.passLargeText : t.failLargeText}</p>
             </div>
           </div>
-        </div>
+        
         </div>
       </div>
     );

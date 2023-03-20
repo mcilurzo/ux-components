@@ -8,8 +8,8 @@ export const translations = {
     passLargeText: 'Pass (large text)',
     failSmallText: 'Fail (small text)',
     failLargeText: 'Fail (large text)',
-    levelAA: 'Level AA:',
-    levelAAA: 'Level AAA:',
+    levelAA: 'AA',
+    levelAAA: 'AAA',
   },
   de: {
     color1Label: 'Vordergrund:',
@@ -20,7 +20,7 @@ export const translations = {
     passLargeText: 'Bestanden (großer Text)',
     failSmallText: 'Nicht bestanden (kleiner Text)',
     failLargeText: 'Nicht bestanden (großer Text)',
-    levelAA: 'Stufe AA:',
-    levelAAA: 'Stufe AAA:',
+    levelAA: 'AA',
+    levelAAA: 'AAA',
   },
 };
