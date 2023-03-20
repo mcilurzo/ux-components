@@ -68,23 +68,13 @@ export class ColorContrastChecker {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 
-  private getWCAGCompliance(contrastRatio: number): string {
-    const aaNormal = contrastRatio >= 4.5;
-    const aaLarge = contrastRatio >= 3;
-    const aaaNormal = contrastRatio >= 7;
-    const aaaLarge = contrastRatio >= 4.5;
-  
-    const t = translations[this.language];
-  
-    let result = `${t.levelAA}`;
-  
-    result += aaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
-    result += aaLarge ? `${t.passLargeText}; ` : `${t.failLargeText}; `;
-    result += `${t.levelAAA}`;
-    result += aaaNormal ? `${t.passSmallText}, ` : `${t.failSmallText}, `;
-    result += aaaLarge ? `${t.passLargeText}` : `${t.failLargeText}`;
-  
-    return result;
+  private getWCAGCompliance(contrastRatio: number) {
+    return {
+      aaNormal: contrastRatio >= 4.5,
+      aaLarge: contrastRatio >= 3,
+      aaaNormal: contrastRatio >= 7,
+      aaaLarge: contrastRatio >= 4.5,
+    };
   }
   
 
@@ -96,8 +86,8 @@ export class ColorContrastChecker {
     return (
       <div class="container">
         <div>
-        <label htmlFor="color1">{t.color1Label}</label>
-          <select
+        <sbb-form-field error-space="none" label="{t.color1Label}" size="m" width="default">
+        <select
             id="color1"
             onInput={(e: any) => {
               this.color1 = e.target.value;
@@ -107,9 +97,10 @@ export class ColorContrastChecker {
               <option value={color.value}>{color.name} ({color.value})</option>
             ))}
           </select>
+        </sbb-form-field>
         </div>
         <div>
-        <label htmlFor="color2">{t.color2Label}</label>
+          <sbb-form-field error-space="none" label="{t.color2Label}" size="m" width="default">
           <select
             id="color2"
             onInput={(e: any) => {
@@ -120,6 +111,7 @@ export class ColorContrastChecker {
               <option value={color.value}>{color.name} ({color.value})</option>
             ))}
           </select>
+          </sbb-form-field>
         </div>
         <div class="color-display">
           <div class="color-box" style={{ backgroundColor: this.color1 }}></div>
@@ -129,14 +121,34 @@ export class ColorContrastChecker {
           <p class="contrast-ratio">
           {t.contrastRatio} {contrastRatio.toFixed(2)}:1
           </p>
-          <div class="wcag-compliance">
-            <p>{t.wcagCompliance}</p>
-            <p>{wcagCompliance}</p>
+          <div class="wcag-levels">
+          <div class="wcag-level">
+            <div>{t.levelAA}</div>
+            <div class={wcagCompliance.aaNormal ? 'pass' : 'fail'}>
+              {wcagCompliance.aaNormal ? t.passSmallText : t.failSmallText}
+            </div>
+            <div class={wcagCompliance.aaLarge ? 'pass' : 'fail'}>
+              {wcagCompliance.aaLarge ? t.passLargeText : t.failLargeText}
+            </div>
           </div>
+          <div class="wcag-level">
+            <div>{t.levelAAA}</div>
+            <div class={wcagCompliance.aaaNormal ? 'pass' : 'fail'}>
+              {wcagCompliance.aaaNormal ? t.passSmallText : t.failSmallText}
+            </div>
+            <div class={wcagCompliance.aaaLarge ? 'pass' : 'fail'}>
+              {wcagCompliance.aaaLarge ? t.passLargeText : t.failLargeText}
+            </div>
+          </div>
+        </div>
         </div>
         <sbb-button variant="secondary" href="/de/design-system/how-to-use-the-design-system/">
           Test
         </sbb-button>
+
+
+        
+
       </div>
     );
   }
