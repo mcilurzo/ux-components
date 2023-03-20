@@ -12,8 +12,8 @@ export const translations = {
     levelAAA: 'Level AAA:',
   },
   de: {
-    color1Label: 'Farbe 1:',
-    color2Label: 'Farbe 2:',
+    color1Label: 'Vordergrund:',
+    color2Label: 'Hintergrund:',
     contrastRatio: 'Kontrastverhältnis:',
     wcagCompliance: 'WCAG-Konformität:',
     passSmallText: 'Bestanden (kleiner Text)',

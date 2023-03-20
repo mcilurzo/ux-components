@@ -84,10 +84,10 @@ export class ColorContrastChecker {
     const t = translations[this.language];
   
     return (
-      <div class="container">
-        <div>
-        <sbb-form-field error-space="none" label="{t.color1Label}" size="m" width="default">
-        <select
+      <div class="color-contrast-checker">
+        <div class="foreground-color">
+        <sbb-form-field error-space="none" label={t.color1Label} size="m" width="default">
+          <select
             id="color1"
             onInput={(e: any) => {
               this.color1 = e.target.value;
@@ -98,9 +98,10 @@ export class ColorContrastChecker {
             ))}
           </select>
         </sbb-form-field>
+        <div class="color-box" style={{ backgroundColor: this.color1 }}></div>
         </div>
-        <div>
-          <sbb-form-field error-space="none" label="{t.color2Label}" size="m" width="default">
+        <div class="background-color">
+          <sbb-form-field error-space="none" label={t.color2Label} size="m" width="default">
           <select
             id="color2"
             onInput={(e: any) => {
@@ -112,12 +113,9 @@ export class ColorContrastChecker {
             ))}
           </select>
           </sbb-form-field>
-        </div>
-        <div class="color-display">
-          <div class="color-box" style={{ backgroundColor: this.color1 }}></div>
           <div class="color-box" style={{ backgroundColor: this.color2 }}></div>
         </div>
-        <div>
+        <div class="wcag-compliance">
           <p class="contrast-ratio">
           {t.contrastRatio} {contrastRatio.toFixed(2)}:1
           </p>
@@ -142,13 +140,6 @@ export class ColorContrastChecker {
           </div>
         </div>
         </div>
-        <sbb-button variant="secondary" href="/de/design-system/how-to-use-the-design-system/">
-          Test
-        </sbb-button>
-
-
-        
-
       </div>
     );
   }
