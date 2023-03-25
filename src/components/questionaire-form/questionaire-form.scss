@@ -1,0 +1,21 @@
+
+.question {
+
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--sbb-border-radius-4x);
+  border: 1px solid var(--sbb-color-cloud-default);
+  margin-bottom: var(--sbb-spacing-fixed-3x);
+
+  padding: var(--sbb-spacing-fixed-4x) var(--sbb-spacing-fixed-4x);
+
+}
+p {
+  margin:0 0 var(--sbb-spacing-fixed-4x) 0;
+  &.answer {
+    margin-bottom:0;
+  }
+}
+.button-left {
+  margin-right: var(--sbb-spacing-fixed-4x);
+}
