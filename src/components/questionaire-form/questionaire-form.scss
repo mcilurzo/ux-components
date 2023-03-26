@@ -14,6 +14,10 @@
     "back back"; 
 }
 
+.back { grid-area: back; }
+.recommendation { grid-area: recommendation; }
+.history { grid-area: history; }
+
 p {
   margin:0 0 var(--sbb-spacing-fixed-4x) 0;
   &.answer {
