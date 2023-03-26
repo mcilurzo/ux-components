@@ -1,6 +1,6 @@
 import { r as registerInstance, h } from './index-94896ee5.js';
 
-const questionaireFormCss = ".question{margin-block-start:0}.summary{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px 16px;grid-template-areas:\"recommendation history\" \"back back\"}.back{grid-area:back}.recommendation{grid-area:recommendation}.history{grid-area:history}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
+const questionaireFormCss = ":host{width:100%;display:block}.question{margin-block-start:0}.summary{display:grid;width:100%;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px 16px;grid-template-areas:\"recommendation history\" \"back back\"}.back{grid-area:back}.recommendation{grid-area:recommendation}.history{grid-area:history}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
 
 const QuestionaireForm = class {
   constructor(hostRef) {
