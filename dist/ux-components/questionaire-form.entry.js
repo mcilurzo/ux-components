@@ -279,9 +279,9 @@ const QuestionaireForm = class {
   }
   render() {
     if (this.currentStep >= this.questions.length) {
-      return (h("div", { class: "summary" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "question" }, h("p", null, entry.question), " ", h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("p", { class: "recomondation" }, this.getRecommendation()), h("button", { onClick: () => this.reset() }, this.getLocale().reset)));
+      return (h("sbb-group", { color: "milk", padding: "l-l" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "question" }, h("p", null, entry.question), " ", h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("p", { class: "recomondation" }, this.getRecommendation()), h("sbb-button", { variant: "secondary", onClick: () => this.reset() }, this.getLocale().reset)));
     }
-    return (h("div", { class: "question" }, h("p", null, this.questions[this.currentStep].question), h("sbb-button", { class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
+    return (h("sbb-group", { color: "milk", padding: "l-l" }, h("p", null, this.questions[this.currentStep].question), h("sbb-button", { variant: "secondary", class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { variant: "secondary", class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
   }
 };
 QuestionaireForm.style = questionaireFormCss;

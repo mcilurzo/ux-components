@@ -314,8 +314,7 @@ reset() {
 render() {
   if (this.currentStep >= this.questions.length) {
     return (
-      <div class="summary" >
-       
+      <sbb-group color="milk" padding="l-l">
        <div class="history" >
           {this.answerHistory.map((entry) => (
             <div class="question">
@@ -324,17 +323,17 @@ render() {
           ))}
         </div>
         <p class="recomondation">{this.getRecommendation()}</p>
-        <button onClick={() => this.reset()}>{this.getLocale().reset}</button>
-      </div>
+        <sbb-button variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+      </sbb-group>
     );
   }
 
   return (
-    <div class="question">
+    <sbb-group color="milk" padding="l-l">
       <p>{this.questions[this.currentStep].question}</p>
-      <sbb-button class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
-      <sbb-button class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
-    </div>
+      <sbb-button variant="secondary" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
+      <sbb-button variant="secondary" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
+    </sbb-group>
   );
 }
 
