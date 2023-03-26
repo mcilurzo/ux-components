@@ -314,23 +314,26 @@ reset() {
 render() {
   if (this.currentStep >= this.questions.length) {
     return (
-      <sbb-group color="milk" padding="l-l">
-       <div class="history" >
+      <sbb-group class="summary" color="milk" padding="l-l">
+       <sbb-group class="history" color="white" padding="s-s">
           {this.answerHistory.map((entry) => (
-            <div class="question">
-              <p>{entry.question}</p> <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
+            <div class="questions"> 
+              <sbb-title class="question" level="4">{entry.question}</sbb-title>
+              <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
-        </div>
-        <p class="recomondation">{this.getRecommendation()}</p>
-        <sbb-button variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+        </sbb-group>
+        <sbb-group class="recommendation" color="white" padding="s-s">
+          <p>{this.getRecommendation()}</p>
+        </sbb-group>
+        <sbb-button class="back" variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
       </sbb-group>
     );
   }
 
   return (
     <sbb-group color="milk" padding="l-l">
-      <p>{this.questions[this.currentStep].question}</p>
+      <sbb-title class="question" level="4">{this.questions[this.currentStep].question}</sbb-title>
       <sbb-button variant="secondary" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
       <sbb-button variant="secondary" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
     </sbb-group>

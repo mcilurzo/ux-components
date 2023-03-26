@@ -1,6 +1,6 @@
 import { r as registerInstance, h } from './index-94896ee5.js';
 
-const questionaireFormCss = ".question{width:100%;box-sizing:border-box;border-radius:var(--sbb-border-radius-4x);border:1px solid var(--sbb-color-cloud-default);margin-bottom:var(--sbb-spacing-fixed-3x);padding:var(--sbb-spacing-fixed-4x) var(--sbb-spacing-fixed-4x)}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
+const questionaireFormCss = ".question{margin-block-start:0}.summary{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px 16px;grid-template-areas:\"recommendation history\" \"back back\"}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
 
 const QuestionaireForm = class {
   constructor(hostRef) {
@@ -279,9 +279,9 @@ const QuestionaireForm = class {
   }
   render() {
     if (this.currentStep >= this.questions.length) {
-      return (h("sbb-group", { color: "milk", padding: "l-l" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "question" }, h("p", null, entry.question), " ", h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("p", { class: "recomondation" }, this.getRecommendation()), h("sbb-button", { variant: "secondary", onClick: () => this.reset() }, this.getLocale().reset)));
+      return (h("sbb-group", { class: "summary", color: "milk", padding: "l-l" }, h("sbb-group", { class: "history", color: "white", padding: "s-s" }, this.answerHistory.map((entry) => (h("div", { class: "questions" }, h("sbb-title", { class: "question", level: "4" }, entry.question), h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("sbb-group", { class: "recommendation", color: "white", padding: "s-s" }, h("p", null, this.getRecommendation())), h("sbb-button", { class: "back", variant: "secondary", onClick: () => this.reset() }, this.getLocale().reset)));
     }
-    return (h("sbb-group", { color: "milk", padding: "l-l" }, h("p", null, this.questions[this.currentStep].question), h("sbb-button", { variant: "secondary", class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { variant: "secondary", class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
+    return (h("sbb-group", { color: "milk", padding: "l-l" }, h("sbb-title", { class: "question", level: "4" }, this.questions[this.currentStep].question), h("sbb-button", { variant: "secondary", class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { variant: "secondary", class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
   }
 };
 QuestionaireForm.style = questionaireFormCss;
