@@ -314,7 +314,8 @@ reset() {
 render() {
   if (this.currentStep >= this.questions.length) {
     return (
-      <sbb-group class="summary" color="milk" padding="l-l">
+      <sbb-group color="milk" padding="l-l">
+        <div class="summary">
        <div class="history">
           {this.answerHistory.map((entry) => (
             <div class="questions"> 
@@ -327,6 +328,7 @@ render() {
           <p>{this.getRecommendation()}</p>
         </div>
         <sbb-button class="back" variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+        </div>
       </sbb-group>
     );
   }

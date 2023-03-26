@@ -279,7 +279,7 @@ const QuestionaireForm = class {
   }
   render() {
     if (this.currentStep >= this.questions.length) {
-      return (h("sbb-group", { class: "summary", color: "milk", padding: "l-l" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "questions" }, h("sbb-title", { class: "question", level: "4" }, entry.question), h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("div", { class: "recommendation" }, h("p", null, this.getRecommendation())), h("sbb-button", { class: "back", variant: "secondary", onClick: () => this.reset() }, this.getLocale().reset)));
+      return (h("sbb-group", { color: "milk", padding: "l-l" }, h("div", { class: "summary" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "questions" }, h("sbb-title", { class: "question", level: "4" }, entry.question), h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("div", { class: "recommendation" }, h("p", null, this.getRecommendation())), h("sbb-button", { class: "back", variant: "secondary", onClick: () => this.reset() }, this.getLocale().reset))));
     }
     return (h("sbb-group", { color: "milk", padding: "l-l" }, h("sbb-title", { class: "question", level: "4" }, this.questions[this.currentStep].question), h("sbb-button", { variant: "secondary", class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { variant: "secondary", class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
   }
