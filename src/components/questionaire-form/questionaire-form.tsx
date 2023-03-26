@@ -315,17 +315,17 @@ render() {
   if (this.currentStep >= this.questions.length) {
     return (
       <sbb-group class="summary" color="milk" padding="l-l">
-       <sbb-group class="history" color="white" padding="s-s">
+       <div class="history">
           {this.answerHistory.map((entry) => (
             <div class="questions"> 
               <sbb-title class="question" level="4">{entry.question}</sbb-title>
               <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
-        </sbb-group>
-        <sbb-group class="recommendation" color="white" padding="s-s">
+        </div>
+        <div class="recommendation">
           <p>{this.getRecommendation()}</p>
-        </sbb-group>
+        </div>
         <sbb-button class="back" variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
       </sbb-group>
     );
