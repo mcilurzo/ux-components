@@ -327,7 +327,7 @@ render() {
           ))}
         </div>
         <div class="recommendation">
-          <sbb-title level="4">Unsere Empfehlung</sbb-title>
+          <sbb-title class="title-answer" level="4">Unsere Empfehlung</sbb-title>
           <p>{this.getRecommendation()}</p>
           <sbb-button variant="secondary" size="m" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
         </div>
@@ -350,7 +350,7 @@ render() {
           ))}
         </div>
         <div class="recommendation">
-        <sbb-title level="4">Unsere Fragen</sbb-title>
+        <sbb-title class="title-question" level="4">Unsere Fragen</sbb-title>
         <sbb-title class="question" level="6">{this.questions[this.currentStep].question}</sbb-title>
       <sbb-button variant="secondary" size="m" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
       <sbb-button variant="secondary" size="m" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>

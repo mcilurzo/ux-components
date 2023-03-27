@@ -21,15 +21,17 @@ sbb-title {
 .recommendation { 
   grid-area: recommendation; 
 }
+.title-answer, .title-question {
+  width: 100%;
+  display: block;
+  border-bottom: solid 1px var(--sbb-color-cloud-default);
+  padding-bottom:12px;
+  }
 
 .history { 
   grid-area: history; 
 
-  .title-answer {
-    width: 100%;
-    display: block;
-      border-bottom: solid 1px var(--sbb-color-cloud-default);
-    }
+
   
   .question {
     sbb-title {
