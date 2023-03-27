@@ -1,6 +1,6 @@
 import { r as registerInstance, h } from './index-94896ee5.js';
 
-const questionaireFormCss = "sbb-title{margin-block-start:0}.summary{display:grid;width:100%;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px 16px;grid-template-areas:\"recommendation history\" \"back back\"}.back{grid-area:back;text-align:right}.recommendation{grid-area:recommendation}.history{grid-area:history}.history .question{padding-bottom:12px;margin-bottom:12px;border-bottom:solid 1px var(--sbb-color-metal-default)}.history .question sbb-title{margin-block-start:0}.history .question:last-child{border-bottom:none}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
+const questionaireFormCss = "sbb-title{margin-block-start:0}.summary{display:grid;width:100%;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:32px;grid-template-areas:\"recommendation history\"}.back{grid-area:back;text-align:right}.recommendation{grid-area:recommendation}.history{grid-area:history}.history .question{padding-bottom:12px;margin-bottom:12px;border-bottom:solid 1px var(--sbb-color-smoke-default)}.history .question sbb-title{margin-block-start:0}.history .question:last-child{border-bottom:none}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
 
 const QuestionaireForm = class {
   constructor(hostRef) {
@@ -279,7 +279,7 @@ const QuestionaireForm = class {
   }
   render() {
     if (this.currentStep >= this.questions.length) {
-      return (h("sbb-group", { color: "milk", padding: "l-l" }, h("div", { class: "summary" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "question" }, h("p", null, h("strong", null, entry.question)), h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("div", { class: "recommendation" }, h("sbb-title", { level: "4" }, "Unsere Empfehlung"), h("p", null, this.getRecommendation())), h("div", { class: "back" }, h("sbb-button", { variant: "secondary", size: "m", onClick: () => this.reset() }, this.getLocale().reset)))));
+      return (h("sbb-group", { color: "milk", padding: "l-l" }, h("div", { class: "summary" }, h("div", { class: "history" }, this.answerHistory.map((entry) => (h("div", { class: "question" }, h("sbb-title", { level: "5" }, entry.question), h("p", { class: "answer " + entry.answer }, this.getLocalizedAnswer(entry.answer)))))), h("div", { class: "recommendation" }, h("sbb-title", { level: "4" }, "Unsere Empfehlung"), h("p", null, this.getRecommendation()), h("sbb-button", { variant: "secondary", size: "m", onClick: () => this.reset() }, this.getLocale().reset)))));
     }
     return (h("sbb-group", { color: "milk", padding: "l-l" }, h("sbb-title", { class: "question", level: "4" }, this.questions[this.currentStep].question), h("sbb-button", { variant: "secondary", size: "m", class: "button-left", onClick: () => this.handleAnswer('no') }, this.getLocale().no), h("sbb-button", { variant: "secondary", size: "m", class: "button-right", onClick: () => this.handleAnswer('yes') }, this.getLocale().yes)));
   }

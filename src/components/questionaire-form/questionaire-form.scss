@@ -7,11 +7,10 @@ sbb-title {
   display: grid; 
   width: 100%;
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr auto; 
-  gap: 16px 16px; 
+  grid-template-rows: auto; 
+  gap: 32px; 
   grid-template-areas: 
     "recommendation history"
-    "back back"; 
 }
 
 .back { 
@@ -32,7 +31,7 @@ sbb-title {
     }
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: solid 1px var(--sbb-color-metal-default);
+    border-bottom: solid 1px var(--sbb-color-smoke-default);
     &:last-child {
       border-bottom: none;
     }

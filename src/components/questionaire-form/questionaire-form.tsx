@@ -320,7 +320,7 @@ render() {
         <div class="history">
           {this.answerHistory.map((entry) => (
             <div class="question"> 
-              <p><strong>{entry.question}</strong></p>
+            <sbb-title level="5">{entry.question}</sbb-title>
               <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
@@ -328,8 +328,6 @@ render() {
         <div class="recommendation">
           <sbb-title level="4">Unsere Empfehlung</sbb-title>
           <p>{this.getRecommendation()}</p>
-        </div>
-        <div class="back">
           <sbb-button variant="secondary" size="m" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
         </div>
         </div>
