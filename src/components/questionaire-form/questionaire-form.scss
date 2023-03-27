@@ -1,12 +1,12 @@
-:host {
-  width: 100%;
-  display: block;
-}
+
+
 .question {
-
-  margin-block-start: 0;
-
+  sbb-title {
+    margin-block-start: 0;
+  }
+  margin-bottom: 24px;
 }
+
 .summary {
   display: grid; 
   width: 100%;
@@ -18,9 +18,18 @@
     "back back"; 
 }
 
-.back { grid-area: back; }
-.recommendation { grid-area: recommendation; }
-.history { grid-area: history; }
+.back { 
+  grid-area: back; 
+  text-align: right; 
+}
+
+.recommendation { 
+  grid-area: recommendation; 
+}
+
+.history { 
+  grid-area: history; 
+}
 
 p {
   margin:0 0 var(--sbb-spacing-fixed-4x) 0;
@@ -28,6 +37,7 @@ p {
     margin-bottom:0;
   }
 }
+
 .button-left {
   margin-right: var(--sbb-spacing-fixed-4x);
 }

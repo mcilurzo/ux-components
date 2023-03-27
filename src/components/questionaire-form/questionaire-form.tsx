@@ -15,24 +15,24 @@ translations = {
       question_1: 'Existiert die Komponente schon?',
       question_2: 'Erfüllt es die Anforderungen?',
       question_3: 'Existiert bereits etwas ähnliches?',
-      question_4: 'A Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
-      question_5: 'Kann das Pattern auch an anderen Orten eingesetzt werden?',
-      question_6: 'Enthält das Pattern Business-Logik?',
-      question_7: 'Kann es generalisiert werden damit es auch an anderen Orten funktioniert?',
+      question_4: 'Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
+      question_5: 'Kann die Komponente auch an anderen Orten eingesetzt werden?',
+      question_6: 'Enthält die Komponente Business-Logik?',
+      question_7: 'Kann die Komponente generalisiert werden damit diese auch an anderen Orten eingesetzt werden kann?',
       question_8: 'Kann die Business-Logik entfernt oder ausgelagert werden?',
-      recommendation_y_y: 'Verwenden ;-)',
-      recommendation_y_n_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_y_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_y_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_n_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      default_recommendation: 'Englische Standard-Handlungsempfehlung Text',      
+      recommendation_y_y: 'Ob du wirklich richtig stehst, siehst du wenn das Licht angeht. Bist du sicher, dass du richtig geklickt hast? Wenn ja, brauchst du nichts neues vom Design System.',
+      recommendation_y_n_y: 'Es scheint also ob wir eine besthende Komponente erweitern können um dein Bedürfnis zu erfüllen. Kannst du auf Github ein entsprechendes Ticket erstellen?',
+      recommendation_y_n_n: 'Hmm, schwieriger Fall. Es scheint als ob du die Komponente für andere Zwecke einsetzten willst als von uns angedacht. Oder hab wir was falsch verstanden? Bevor du eine eigene Komponente entwickelst macht es Sinn kurz zu klären ob wir wirklich nicht helfen können.',
+      recommendation_n_y_y: 'Yeah, scheint so als ob wir mit einer Anpassung an einer bestehenden Komponente ans Ziel kommen. Kannst du ein Ticket eröffnen?',
+      recommendation_n_y_n: 'Oh no. Funktionale Änderungen an Komponenten, welche dazu führen, dass andere Anforderungen nicht mehr erfüllt werden, können wir leider nicht umsetzen. Somit würdest zwar du glücklich werden, aber Andere vermutlich nicht. Vielleicht kannst du dein Ziel mit einer anderen Komponente erreichen? Wenn nicht, sieht es so aus als ob dies eine projektspezifische Komponente ist, welche nicht von uns entwickelt werden kann.',
+      recommendation_n_n_n_n: 'Oh, dein Wunsch sieht nach der ultimativen «Schneeflocke» aus. Bitte setzte die Komponente in deinem Projekt um. Schneeflocken sind zwar schön, überleben in unserem warmen Design-System-Klima nicht.',
+      recommendation_n_n_y_n: 'Danke Sherlock, du hast vermutlich einen Blinden Fleck in unserem System gefunden. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_y: 'Es scheint so als könnten wir helfen, zwar muss die Bussiness-Logik noch ausgelagert werden, aber das gelingt sicher irgendwie. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_n: 'Deine Komponente scheint an Business-Logik geknüpft zu sein. Oft lässt sich diese entfernen, aber in deinem Fall vermutlich nicht. Wenn du ganz sicher sein willst, kannst du uns gerne kontaktiern. Ansonsten bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen. Evtl. wäre es dann etwas für das Community-Asset-Repository?',
+      recommendation_n_n_n_y_n: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      recommendation_n_n_n_y_y_n: 'Hmm, schwieriger Fall. Deine Komponente scheint an Business-Logik geknüpft und eine "Schneeflocke zu sein". Es bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen.',
+      recommendation_n_n_n_y_y_y: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» und der Entfernung der Business-Logik zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      default_recommendation: 'Ops da ging was schief!',         
       yes: 'Yes',
       no: 'No',
       reset: 'Reset'
@@ -41,24 +41,24 @@ translations = {
       question_1: 'Existiert die Komponente schon?',
       question_2: 'Erfüllt es die Anforderungen?',
       question_3: 'Existiert bereits etwas ähnliches?',
-      question_4: 'A Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
-      question_5: 'Kann das Pattern auch an anderen Orten eingesetzt werden?',
-      question_6: 'Enthält das Pattern Business-Logik?',
-      question_7: 'Kann es generalisiert werden damit es auch an anderen Orten funktioniert?',
+      question_4: 'Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
+      question_5: 'Kann die Komponente auch an anderen Orten eingesetzt werden?',
+      question_6: 'Enthält die Komponente Business-Logik?',
+      question_7: 'Kann die Komponente generalisiert werden damit diese auch an anderen Orten eingesetzt werden kann?',
       question_8: 'Kann die Business-Logik entfernt oder ausgelagert werden?',
-      recommendation_y_y: 'Verwenden ;-)',
-      recommendation_y_n_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_y_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_y_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_n_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      default_recommendation: 'Deutsche Standard-Handlungsempfehlung Text',      
+      recommendation_y_y: 'Ob du wirklich richtig stehst, siehst du wenn das Licht angeht. Bist du sicher, dass du richtig geklickt hast? Wenn ja, brauchst du nichts neues vom Design System.',
+      recommendation_y_n_y: 'Es scheint also ob wir eine besthende Komponente erweitern können um dein Bedürfnis zu erfüllen. Kannst du auf Github ein entsprechendes Ticket erstellen?',
+      recommendation_y_n_n: 'Hmm, schwieriger Fall. Es scheint als ob du die Komponente für andere Zwecke einsetzten willst als von uns angedacht. Oder hab wir was falsch verstanden? Bevor du eine eigene Komponente entwickelst macht es Sinn kurz zu klären ob wir wirklich nicht helfen können.',
+      recommendation_n_y_y: 'Yeah, scheint so als ob wir mit einer Anpassung an einer bestehenden Komponente ans Ziel kommen. Kannst du ein Ticket eröffnen?',
+      recommendation_n_y_n: 'Oh no. Funktionale Änderungen an Komponenten, welche dazu führen, dass andere Anforderungen nicht mehr erfüllt werden, können wir leider nicht umsetzen. Somit würdest zwar du glücklich werden, aber Andere vermutlich nicht. Vielleicht kannst du dein Ziel mit einer anderen Komponente erreichen? Wenn nicht, sieht es so aus als ob dies eine projektspezifische Komponente ist, welche nicht von uns entwickelt werden kann.',
+      recommendation_n_n_n_n: 'Oh, dein Wunsch sieht nach der ultimativen «Schneeflocke» aus. Bitte setzte die Komponente in deinem Projekt um. Schneeflocken sind zwar schön, überleben in unserem warmen Design-System-Klima nicht.',
+      recommendation_n_n_y_n: 'Danke Sherlock, du hast vermutlich einen Blinden Fleck in unserem System gefunden. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_y: 'Es scheint so als könnten wir helfen, zwar muss die Bussiness-Logik noch ausgelagert werden, aber das gelingt sicher irgendwie. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_n: 'Deine Komponente scheint an Business-Logik geknüpft zu sein. Oft lässt sich diese entfernen, aber in deinem Fall vermutlich nicht. Wenn du ganz sicher sein willst, kannst du uns gerne kontaktiern. Ansonsten bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen. Evtl. wäre es dann etwas für das Community-Asset-Repository?',
+      recommendation_n_n_n_y_n: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      recommendation_n_n_n_y_y_n: 'Hmm, schwieriger Fall. Deine Komponente scheint an Business-Logik geknüpft und eine "Schneeflocke zu sein". Es bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen.',
+      recommendation_n_n_n_y_y_y: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» und der Entfernung der Business-Logik zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      default_recommendation: 'Ops da ging was schief!',       
       yes: 'Ja',
       no: 'Nein',
       reset: 'Zurücksetzen'
@@ -68,50 +68,49 @@ translations = {
       question_2: 'Erfüllt es die Anforderungen?',
       question_3: 'Existiert bereits etwas ähnliches?',
       question_4: 'Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
-      question_5: 'Kann das Pattern auch an anderen Orten eingesetzt werden?',
-      question_6: 'Enthält das Pattern Business-Logik?',
-      question_7: 'Kann es generalisiert werden damit es auch an anderen Orten funktioniert?',
+      question_5: 'Kann die Komponente auch an anderen Orten eingesetzt werden?',
+      question_6: 'Enthält die Komponente Business-Logik?',
+      question_7: 'Kann die Komponente generalisiert werden damit diese auch an anderen Orten eingesetzt werden kann?',
       question_8: 'Kann die Business-Logik entfernt oder ausgelagert werden?',
-      recommendation_y_y: 'Verwenden ;-)',
-      recommendation_y_n_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_y_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_y_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_n_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      default_recommendation: 'Deutsche Standard-Handlungsempfehlung Text',      
+      recommendation_y_y: 'Ob du wirklich richtig stehst, siehst du wenn das Licht angeht. Bist du sicher, dass du richtig geklickt hast? Wenn ja, brauchst du nichts neues vom Design System.',
+      recommendation_y_n_y: 'Es scheint also ob wir eine besthende Komponente erweitern können um dein Bedürfnis zu erfüllen. Kannst du auf Github ein entsprechendes Ticket erstellen?',
+      recommendation_y_n_n: 'Hmm, schwieriger Fall. Es scheint als ob du die Komponente für andere Zwecke einsetzten willst als von uns angedacht. Oder hab wir was falsch verstanden? Bevor du eine eigene Komponente entwickelst macht es Sinn kurz zu klären ob wir wirklich nicht helfen können.',
+      recommendation_n_y_y: 'Yeah, scheint so als ob wir mit einer Anpassung an einer bestehenden Komponente ans Ziel kommen. Kannst du ein Ticket eröffnen?',
+      recommendation_n_y_n: 'Oh no. Funktionale Änderungen an Komponenten, welche dazu führen, dass andere Anforderungen nicht mehr erfüllt werden, können wir leider nicht umsetzen. Somit würdest zwar du glücklich werden, aber Andere vermutlich nicht. Vielleicht kannst du dein Ziel mit einer anderen Komponente erreichen? Wenn nicht, sieht es so aus als ob dies eine projektspezifische Komponente ist, welche nicht von uns entwickelt werden kann.',
+      recommendation_n_n_n_n: 'Oh, dein Wunsch sieht nach der ultimativen «Schneeflocke» aus. Bitte setzte die Komponente in deinem Projekt um. Schneeflocken sind zwar schön, überleben in unserem warmen Design-System-Klima nicht.',
+      recommendation_n_n_y_n: 'Danke Sherlock, du hast vermutlich einen Blinden Fleck in unserem System gefunden. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_y: 'Es scheint so als könnten wir helfen, zwar muss die Bussiness-Logik noch ausgelagert werden, aber das gelingt sicher irgendwie. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_n: 'Deine Komponente scheint an Business-Logik geknüpft zu sein. Oft lässt sich diese entfernen, aber in deinem Fall vermutlich nicht. Wenn du ganz sicher sein willst, kannst du uns gerne kontaktiern. Ansonsten bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen. Evtl. wäre es dann etwas für das Community-Asset-Repository?',
+      recommendation_n_n_n_y_n: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      recommendation_n_n_n_y_y_n: 'Hmm, schwieriger Fall. Deine Komponente scheint an Business-Logik geknüpft und eine "Schneeflocke zu sein". Es bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen.',
+      recommendation_n_n_n_y_y_y: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» und der Entfernung der Business-Logik zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      default_recommendation: 'Ops da ging was schief!',        
       yes: 'Oui',
       no: 'Non',
       reset: 'Réinitialiser'
   },
   it: {
-
       question_1: 'Existiert die Komponente schon?',
       question_2: 'Erfüllt es die Anforderungen?',
       question_3: 'Existiert bereits etwas ähnliches?',
       question_4: 'Kann es so angepasst werden, dass die bestehenden Anforderungen immer noch erfüllt werden?',
-      question_5: 'Kann das Pattern auch an anderen Orten eingesetzt werden?',
-      question_6: 'Enthält das Pattern Business-Logik?',
-      question_7: 'Kann es generalisiert werden damit es auch an anderen Orten funktioniert?',
+      question_5: 'Kann die Komponente auch an anderen Orten eingesetzt werden?',
+      question_6: 'Enthält die Komponente Business-Logik?',
+      question_7: 'Kann die Komponente generalisiert werden damit diese auch an anderen Orten eingesetzt werden kann?',
       question_8: 'Kann die Business-Logik entfernt oder ausgelagert werden?',
-      recommendation_y_y: 'Verwenden ;-)',
-      recommendation_y_n_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_y_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_y_y: 'Vorschlag für eine Erweiterung einer Komponente auf Github einreichen',
-      recommendation_n_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',  
-      recommendation_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_n: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      recommendation_n_n_n_y_y_n: 'Die Komponente scheint zu projektspezifisch. Bitte entwickle eine eigene Komponente für dein Projekt / Case',
-      recommendation_n_n_n_y_y_y: 'Erstellung eines Protoypen in Figma oder textuelle Spezfikation der Anforderung.',
-      default_recommendation: 'Deutsche Standard-Handlungsempfehlung Text',      
+      recommendation_y_y: 'Ob du wirklich richtig stehst, siehst du wenn das Licht angeht. Bist du sicher, dass du richtig geklickt hast? Wenn ja, brauchst du nichts neues vom Design System.',
+      recommendation_y_n_y: 'Es scheint also ob wir eine besthende Komponente erweitern können um dein Bedürfnis zu erfüllen. Kannst du auf Github ein entsprechendes Ticket erstellen?',
+      recommendation_y_n_n: 'Hmm, schwieriger Fall. Es scheint als ob du die Komponente für andere Zwecke einsetzten willst als von uns angedacht. Oder hab wir was falsch verstanden? Bevor du eine eigene Komponente entwickelst macht es Sinn kurz zu klären ob wir wirklich nicht helfen können.',
+      recommendation_n_y_y: 'Yeah, scheint so als ob wir mit einer Anpassung an einer bestehenden Komponente ans Ziel kommen. Kannst du ein Ticket eröffnen?',
+      recommendation_n_y_n: 'Oh no. Funktionale Änderungen an Komponenten, welche dazu führen, dass andere Anforderungen nicht mehr erfüllt werden, können wir leider nicht umsetzen. Somit würdest zwar du glücklich werden, aber Andere vermutlich nicht. Vielleicht kannst du dein Ziel mit einer anderen Komponente erreichen? Wenn nicht, sieht es so aus als ob dies eine projektspezifische Komponente ist, welche nicht von uns entwickelt werden kann.',
+      recommendation_n_n_n_n: 'Oh, dein Wunsch sieht nach der ultimativen «Schneeflocke» aus. Bitte setzte die Komponente in deinem Projekt um. Schneeflocken sind zwar schön, überleben in unserem warmen Design-System-Klima nicht.',
+      recommendation_n_n_y_n: 'Danke Sherlock, du hast vermutlich einen Blinden Fleck in unserem System gefunden. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_y: 'Es scheint so als könnten wir helfen, zwar muss die Bussiness-Logik noch ausgelagert werden, aber das gelingt sicher irgendwie. Gerne erfahren wir mehr über deine Komponente. Willst du ein Ticket eröffnen und wir schauen uns das gemeinsam an?',
+      recommendation_n_n_y_y_n: 'Deine Komponente scheint an Business-Logik geknüpft zu sein. Oft lässt sich diese entfernen, aber in deinem Fall vermutlich nicht. Wenn du ganz sicher sein willst, kannst du uns gerne kontaktiern. Ansonsten bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen. Evtl. wäre es dann etwas für das Community-Asset-Repository?',
+      recommendation_n_n_n_y_n: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      recommendation_n_n_n_y_y_n: 'Hmm, schwieriger Fall. Deine Komponente scheint an Business-Logik geknüpft und eine "Schneeflocke zu sein". Es bleibt dir nichts anderes übrig als die Komponente in eurem Projekt umzusetzen.',
+      recommendation_n_n_n_y_y_y: 'Yeah, sieht so aus als ob wir mit etwas «Generalisierung» und der Entfernung der Business-Logik zu einer neuen Komponente kommen. Willst du ein Ticket erstellen? Vielleicht sogar mit ein paar konkreten Figma-Screens anreichern?',
+      default_recommendation: 'Ops da ging was schief!',           
       yes: 'Sì',
       no: 'No',
       reset: 'Reset'
@@ -180,6 +179,7 @@ handleAnswer(answer) {
   this.answerHistory = [...this.answerHistory, { question: this.questions[this.currentStep].question, answer }];
   this.currentStep = nextStep;
 }
+
 getRecommendation() {
 
   if (
@@ -294,6 +294,7 @@ getRecommendation() {
   // Standardempfehlung, wenn keine Bedingung erfüllt ist
   return this.getLocale().default_recommendation;
 }
+
 getLocalizedAnswer(answer) {
   const locale = this.getLocale();
   if (answer === 'yes') {
@@ -316,18 +317,20 @@ render() {
     return (
       <sbb-group color="milk" padding="l-l">
         <div class="summary">
-       <div class="history">
+        <sbb-group color="white" padding="s-s" class="history">
           {this.answerHistory.map((entry) => (
-            <div class="questions"> 
-              <sbb-title class="question" level="4">{entry.question}</sbb-title>
+            <div class="question"> 
+              <sbb-title level="5">{entry.question}</sbb-title>
               <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
-        </div>
+        </sbb-group>
         <div class="recommendation">
           <p>{this.getRecommendation()}</p>
         </div>
-        <sbb-button class="back" variant="secondary" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+        <div class="back">
+          <sbb-button variant="secondary" size="m" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+        </div>
         </div>
       </sbb-group>
     );
@@ -336,8 +339,8 @@ render() {
   return (
     <sbb-group color="milk" padding="l-l">
       <sbb-title class="question" level="4">{this.questions[this.currentStep].question}</sbb-title>
-      <sbb-button variant="secondary" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
-      <sbb-button variant="secondary" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
+      <sbb-button variant="secondary" size="m" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
+      <sbb-button variant="secondary" size="m" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
     </sbb-group>
   );
 }
