@@ -318,9 +318,10 @@ render() {
       <sbb-group color="milk" padding="l-l">
         <div class="summary">
         <div class="history">
+        <sbb-title level="4">Deine Antworten</sbb-title>
           {this.answerHistory.map((entry) => (
             <div class="question"> 
-            <sbb-title level="5">{entry.question}</sbb-title>
+            <sbb-title level="6">{entry.question}</sbb-title>
               <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
@@ -336,11 +337,26 @@ render() {
   }
 
   return (
+
     <sbb-group color="milk" padding="l-l">
-      <sbb-title class="question" level="4">{this.questions[this.currentStep].question}</sbb-title>
+        <div class="summary">
+        <div class="history">
+        <sbb-title level="4">Deine Antworten</sbb-title>
+          {this.answerHistory.map((entry) => (
+            <div class="question"> 
+            <sbb-title level="6">{entry.question}</sbb-title>
+              <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
+            </div>
+          ))}
+        </div>
+        <div class="recommendation">
+        <sbb-title level="4">Unsere Fragen</sbb-title>
+        <sbb-title class="question" level="6">{this.questions[this.currentStep].question}</sbb-title>
       <sbb-button variant="secondary" size="m" class="button-left" onClick={() => this.handleAnswer('no')}>{this.getLocale().no}</sbb-button>
       <sbb-button variant="secondary" size="m" class="button-right" onClick={() => this.handleAnswer('yes')}>{this.getLocale().yes}</sbb-button>
-    </sbb-group>
+        </div>
+        </div>
+      </sbb-group>
   );
 }
 
