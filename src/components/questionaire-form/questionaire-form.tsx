@@ -317,15 +317,16 @@ render() {
     return (
       <sbb-group color="milk" padding="l-l">
         <div class="summary">
-        <sbb-group color="white" padding="s-s" class="history">
+        <div class="history">
           {this.answerHistory.map((entry) => (
             <div class="question"> 
-              <sbb-title level="5">{entry.question}</sbb-title>
+              <p><strong>{entry.question}</strong></p>
               <p class={"answer " + entry.answer}>{this.getLocalizedAnswer(entry.answer)}</p>
             </div>
           ))}
-        </sbb-group>
+        </div>
         <div class="recommendation">
+          <sbb-title level="4">Unsere Empfehlung</sbb-title>
           <p>{this.getRecommendation()}</p>
         </div>
         <div class="back">
