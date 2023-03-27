@@ -20,6 +20,12 @@ sbb-title {
 
 .recommendation { 
   grid-area: recommendation; 
+  .question {
+
+    padding-bottom: 12px;
+
+    
+  }
 }
 .title-answer, .title-question {
   width: 100%;
@@ -31,8 +37,6 @@ sbb-title {
 .history { 
   grid-area: history; 
 
-
-  
   .question {
     sbb-title {
       margin-block-start: 0;

@@ -329,7 +329,7 @@ render() {
         <div class="recommendation">
           <sbb-title class="title-answer" level="4">Unsere Empfehlung</sbb-title>
           <p>{this.getRecommendation()}</p>
-          <sbb-button variant="secondary" size="m" onClick={() => this.reset()}>{this.getLocale().reset}</sbb-button>
+          <p><sbb-link onClick={() => this.reset()}>{this.getLocale().reset}</sbb-link></p>
         </div>
         </div>
       </sbb-group>
