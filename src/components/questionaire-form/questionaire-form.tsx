@@ -318,7 +318,7 @@ render() {
       <sbb-group color="milk" padding="l-l">
         <div class="summary">
         <div class="history">
-        <sbb-title level="4">Deine Antworten</sbb-title>
+        <sbb-title class="title-answer" level="4">Deine Antworten</sbb-title>
           {this.answerHistory.map((entry) => (
             <div class="question"> 
             <sbb-title level="6">{entry.question}</sbb-title>
@@ -341,7 +341,7 @@ render() {
     <sbb-group color="milk" padding="l-l">
         <div class="summary">
         <div class="history">
-        <sbb-title level="4">Deine Antworten</sbb-title>
+        <sbb-title class="title-answer" level="4">Deine Antworten</sbb-title>
           {this.answerHistory.map((entry) => (
             <div class="question"> 
             <sbb-title level="6">{entry.question}</sbb-title>
