@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getElement } from './index-94896ee5.js';
+import { proxyCustomElement, HTMLElement, h } from '@stencil/core/internal/client';
 
 const translations = {
   en: {
@@ -25,13 +25,39 @@ const translations = {
     levelAA: 'AA',
     levelAAA: 'AAA',
   },
+  fr: {
+    color1Label: 'Premier plan:',
+    color2Label: 'L’arrière-plan:',
+    contrastRatio: 'Rapport de contraste:',
+    wcagCompliance: 'Conformité aux WCAG:',
+    passSmallText: 'Conforme (petit texte)',
+    passLargeText: 'Conforme (grand texte)',
+    failSmallText: 'Non conforme (petit texte)',
+    failLargeText: 'Non conforme (grand texte)',
+    levelAA: 'AA',
+    levelAAA: 'AAA',
+  },
+  it: {
+    color1Label: 'Primo piano:',
+    color2Label: 'Secondo piano::',
+    contrastRatio: 'KontrastRapporto di contrasto:',
+    wcagCompliance: 'Conformità WCAG:',
+    passSmallText: 'Superato (testo piccolo)',
+    passLargeText: 'Superato (testo grande)',
+    failSmallText: 'Non superato (testo piccolo)',
+    failLargeText: 'Non superato (testo grande)',
+    levelAA: 'AA',
+    levelAAA: 'AAA',
+  },
 };
 
 const colorContrastCheckerCss = ".color-contrast-checker{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:var(--sbb-spacing-fixed-3x) var(--sbb-spacing-fixed-3x);grid-auto-flow:row;grid-template-areas:\"foreground-color background-color\" \"contrast-ratio contrast-ratio\" \"wcag-compliance wcag-compliance\"}.foreground-color{grid-area:foreground-color}.background-color{grid-area:background-color}.color-box{width:100%;height:var(--sbb-spacing-fixed-30x);border-radius:var(--sbb-border-radius-4x);border:1px solid var(--sbb-color-cloud-default);margin-top:var(--sbb-spacing-fixed-3x)}sbb-form-field{width:100%}sbb-form-field select{width:100%}.contrast-ratio{grid-area:contrast-ratio;background-color:var(--sbb-color-black-default);color:var(--sbb-color-white-default);border-radius:var(--sbb-border-radius-4x);border:solid 2px var(--sbb-color-white-default);text-align:center;padding:var(--sbb-spacing-fixed-2x) var(--sbb-spacing-fixed-4x);margin:-96px auto 0 auto;height:30px;line-height:30px}.wcag-compliance{grid-area:wcag-compliance;display:flex;gap:var(--sbb-spacing-fixed-6x)}.wcag-level .result{display:flex;gap:var(--sbb-spacing-fixed-2x)}.wcag-level .result.pass .icon{color:var(--sbb-color-green-default)}.wcag-level .result.fail .icon{color:var(--sbb-color-red-default)}.wcag-level .result .icon{width:24px;height:24px}.wcag-level .result p{margin:0}";
 
-const ColorContrastChecker = class {
-  constructor(hostRef) {
-    registerInstance(this, hostRef);
+const ColorContrastChecker$1 = /*@__PURE__*/ proxyCustomElement(class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    this.__attachShadow();
     this.colorOptions = [
       { name: 'Red', value: '#EB0000' },
       { name: 'Red125', value: '#C60018' },
@@ -106,10 +132,30 @@ const ColorContrastChecker = class {
         this.color2 = e.target.value;
       } }, this.colorOptions.map((color) => (h("option", { value: color.value }, color.name, " (", color.value, ")"))))), h("div", { class: "color-box", style: { backgroundColor: this.color2 } })), h("div", { class: "contrast-ratio" }, contrastRatio.toFixed(2), ":1"), h("div", { class: "wcag-compliance" }, h("div", { class: "wcag-level" }, h("div", null, t.levelAA), h("div", { class: wcagCompliance.aaNormal ? 'result pass' : 'result fail' }, h("div", { class: "icon" }, wcagCompliance.aaNormal ? h("sbb-icon", { name: "circle-tick-small" }) : h("sbb-icon", { name: "circle-cross-small" })), h("p", null, wcagCompliance.aaNormal ? t.passSmallText : t.failSmallText)), h("div", { class: wcagCompliance.aaLarge ? 'result pass' : 'result fail' }, h("div", { class: "icon" }, wcagCompliance.aaLarge ? h("sbb-icon", { name: "circle-tick-small" }) : h("sbb-icon", { name: "circle-cross-small" })), h("p", null, wcagCompliance.aaLarge ? t.passLargeText : t.failLargeText))), h("div", { class: "wcag-level" }, h("div", null, t.levelAAA), h("div", { class: wcagCompliance.aaaNormal ? 'result pass' : 'result fail' }, h("div", { class: "icon" }, wcagCompliance.aaaNormal ? h("sbb-icon", { name: "circle-tick-small" }) : h("sbb-icon", { name: "circle-cross-small" })), h("p", null, wcagCompliance.aaaNormal ? t.passSmallText : t.failSmallText)), h("div", { class: wcagCompliance.aaaLarge ? 'result pass' : 'result fail' }, h("div", { class: "icon" }, wcagCompliance.aaaLarge ? h("sbb-icon", { name: "circle-tick-small" }) : h("sbb-icon", { name: "circle-cross-small" })), h("p", null, wcagCompliance.aaaLarge ? t.passLargeText : t.failLargeText))))));
   }
-  get host() { return getElement(this); }
-};
-ColorContrastChecker.style = colorContrastCheckerCss;
+  get host() { return this; }
+  static get style() { return colorContrastCheckerCss; }
+}, [1, "color-contrast-checker", {
+    "language": [1],
+    "color1": [32],
+    "color2": [32]
+  }]);
+function defineCustomElement$1() {
+  if (typeof customElements === "undefined") {
+    return;
+  }
+  const components = ["color-contrast-checker"];
+  components.forEach(tagName => { switch (tagName) {
+    case "color-contrast-checker":
+      if (!customElements.get(tagName)) {
+        customElements.define(tagName, ColorContrastChecker$1);
+      }
+      break;
+  } });
+}
 
-export { ColorContrastChecker as color_contrast_checker };
+const ColorContrastChecker = ColorContrastChecker$1;
+const defineCustomElement = defineCustomElement$1;
 
-//# sourceMappingURL=color-contrast-checker.entry.js.map
+export { ColorContrastChecker, defineCustomElement };
+
+//# sourceMappingURL=color-contrast-checker.js.map

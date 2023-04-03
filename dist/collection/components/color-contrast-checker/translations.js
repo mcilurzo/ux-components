@@ -48,3 +48,4 @@ export const translations = {
     levelAAA: 'AAA',
   },
 };
+//# sourceMappingURL=translations.js.map

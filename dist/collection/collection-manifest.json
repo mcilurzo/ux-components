@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "./components/color-contrast-checker/color-contrast-checker.js",
+    "./components/questionaire-form/questionaire-form.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "3.2.0",
+    "typescriptVersion": "4.9.5"
+  },
+  "collections": [],
+  "bundles": []
+}
