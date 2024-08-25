@@ -86,7 +86,8 @@ export class ColorContrastChecker {
     return (
       <div class="color-contrast-checker">
         <div class="foreground-color">
-        <sbb-form-field error-space="none" label={t.color1Label} size="m" width="default">
+        <sbb-form-field error-space="none" size="m" width="default">
+          <label>label={t.color1Label}</label>
           <sbb-select
             id="color1"
             onInput={(e: any) => {
@@ -101,7 +102,8 @@ export class ColorContrastChecker {
         <div class="color-box" style={{ backgroundColor: this.color1 }}></div>
         </div>
         <div class="background-color">
-          <sbb-form-field error-space="none" label={t.color2Label} size="m" width="default">
+          <sbb-form-field error-space="none" size="m" width="default">
+          <label>label={t.color2Label}</label>
           <sbb-select
             id="color2"
             onInput={(e: any) => {
