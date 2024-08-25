@@ -27,7 +27,7 @@ sbb-title {
 .title-answer, .title-question {
   width: 100%;
   display: block;
-  border-bottom: solid 1px var(--sbb-color-cloud-default);
+  border-bottom: solid 1px var(--sbb-color-cloud);
   padding-bottom:12px;
   }
 
@@ -41,7 +41,7 @@ sbb-title {
     margin-top: 12px;
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: solid 1px var(--sbb-color-cloud-default);
+    border-bottom: solid 1px var(--sbb-color-cloud);
     
   }
 }

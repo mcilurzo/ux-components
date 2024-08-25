@@ -1,6 +1,6 @@
-import { r as registerInstance, h } from './index-0e59f192.js';
+import { r as registerInstance, h } from './index-34b89b01.js';
 
-const questionaireFormCss = "sbb-title{margin-block-start:0}.summary{display:grid;width:100%;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:32px;grid-template-areas:\"recommendation history\"}.back{grid-area:back;text-align:right}.recommendation{grid-area:recommendation}.recommendation .question{padding-bottom:12px}.title-answer,.title-question{width:100%;display:block;border-bottom:solid 1px var(--sbb-color-cloud-default);padding-bottom:12px}.history{grid-area:history}.history .question{margin-top:12px;padding-bottom:12px;margin-bottom:12px;border-bottom:solid 1px var(--sbb-color-cloud-default)}.history .question sbb-title{margin-block-start:0}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
+const questionaireFormCss = "sbb-title{margin-block-start:0}.summary{display:grid;width:100%;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:32px;grid-template-areas:\"recommendation history\"}.back{grid-area:back;text-align:right}.recommendation{grid-area:recommendation}.recommendation .question{padding-bottom:12px}.title-answer,.title-question{width:100%;display:block;border-bottom:solid 1px var(--sbb-color-cloud);padding-bottom:12px}.history{grid-area:history}.history .question{margin-top:12px;padding-bottom:12px;margin-bottom:12px;border-bottom:solid 1px var(--sbb-color-cloud)}.history .question sbb-title{margin-block-start:0}p{margin:0 0 var(--sbb-spacing-fixed-4x) 0}p.answer{margin-bottom:0}.button-left{margin-right:var(--sbb-spacing-fixed-4x)}";
 
 const QuestionaireForm = class {
   constructor(hostRef) {

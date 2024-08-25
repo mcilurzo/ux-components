@@ -16,7 +16,7 @@
   width: 100%;
   height: var(--sbb-spacing-fixed-30x);
   border-radius: var(--sbb-border-radius-4x);
-  border: 1px solid var(--sbb-color-cloud-default);
+  border: 1px solid var(--sbb-color-cloud);
   margin-top: var(--sbb-spacing-fixed-3x);
 }
 
@@ -29,10 +29,10 @@ sbb-form-field {
 
 .contrast-ratio {
   grid-area: contrast-ratio;
-  background-color: var(--sbb-color-black-default);
-  color: var(--sbb-color-white-default);
+  background-color: var(--sbb-color-black);
+  color: var(--sbb-color-white);
   border-radius: var(--sbb-border-radius-4x);
-  border: solid 2px var(--sbb-color-white-default);
+  border: solid 2px var(--sbb-color-white);
   text-align: center;
   padding: var(--sbb-spacing-fixed-2x) var(--sbb-spacing-fixed-4x);
   margin: -96px auto 0 auto; 
@@ -53,12 +53,12 @@ sbb-form-field {
     gap: var(--sbb-spacing-fixed-2x);
     &.pass {
       .icon {
-        color: var(--sbb-color-green-default);
+        color: var(--sbb-color-green);
       }
     }
     &.fail {
       .icon {
-        color: var(--sbb-color-red-default);
+        color: var(--sbb-color-red);
       }
     }
     .icon {
