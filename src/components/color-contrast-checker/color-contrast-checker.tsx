@@ -95,7 +95,7 @@ export class ColorContrastChecker {
             }}
           >
             {this.colorOptions.map((color) => (
-              <sbb-option value={color.value}>{color.name} ({color.value})</sbb-option>
+              <sbb-option value={color.value}>{color.name}</sbb-option>
             ))}
           </sbb-select>
         </sbb-form-field>
@@ -111,7 +111,7 @@ export class ColorContrastChecker {
             }}
           >
             {this.colorOptions.map((color) => (
-              <sbb-option value={color.value}>{color.name} ({color.value})</sbb-option>
+              <sbb-option value={color.value}>{color.name}</sbb-option>
             ))}
           </sbb-select>
           </sbb-form-field>
