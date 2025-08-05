@@ -81,7 +81,7 @@ const ColorContrastChecker = class {
       { name: 'Green', value: '#008233' },
       { name: 'Turquoise', value: '#007E84' },
       { name: 'Sky', value: '#0074BF' },
-      { name: 'Night', value: '#030304ff' },
+      { name: 'Night', value: '#143A85' },
       { name: 'Violet', value: '#6F2282' },
       { name: 'Pink', value: '#C7387A' },
       { name: 'Brown', value: '#A05400' },
