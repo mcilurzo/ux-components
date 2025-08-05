@@ -34,16 +34,17 @@ export class ColorContrastChecker {
     { name: 'Midnight', value: '#151515' },
     { name: 'Black', value: '#000000' },
     { name: 'Blue', value: '#2d327d' },
-    { name: 'Sky', value: '#0079C7' },
-    { name: 'Night', value: '#143A85' },
+    { name: 'Green', value: '#adc0b4ff' },
+    { name: 'Turquoise', value: '#007E84' },
+    { name: 'Sky', value: '#0074BF' },
+    { name: 'Night', value: '#030304ff' },
     { name: 'Violet', value: '#6F2282' },
-    { name: 'Autumn', value: '#E84E10' },
+    { name: 'Pink', value: '#C7387A' },
+    { name: 'Brown', value: '#A05400' },
+    { name: 'Autumn', value: '#CF3B00' },
     { name: 'Orange', value: '#F27E00' },
     { name: 'Peach', value: '#FCBB00' },
     { name: 'Lemon', value: '#FFDE15' },
-    { name: 'Brown', value: '#B76000' },
-    { name: 'Green', value: '#00973B' },
-    { name: 'Turquoise', value: '#00A59B' },
   ];
 
   componentDidLoad() {
