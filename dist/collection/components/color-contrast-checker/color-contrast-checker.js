@@ -24,7 +24,7 @@ export class ColorContrastChecker {
       { name: 'Midnight', value: '#151515' },
       { name: 'Black', value: '#000000' },
       { name: 'Blue', value: '#2d327d' },
-      { name: 'Green', value: '#adc0b4ff' },
+      { name: 'Green', value: '#008233' },
       { name: 'Turquoise', value: '#007E84' },
       { name: 'Sky', value: '#0074BF' },
       { name: 'Night', value: '#030304ff' },

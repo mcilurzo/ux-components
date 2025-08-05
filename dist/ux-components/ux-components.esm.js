@@ -1,2 +1,2 @@
-import{p as o,b as r}from"./p-1a68ac49.js";export{s as setNonce}from"./p-1a68ac49.js";const t=()=>{const r=import.meta.url;const t={};if(r!==""){t.resourcesUrl=new URL(".",r).href}return o(t)};t().then((o=>r([["p-fb880fb9",[[1,"color-contrast-checker",{language:[1],color1:[32],color2:[32]}],[1,"questionaire-form",{currentStep:[32],answerHistory:[32]}]]]],o)));
+import{p as o,b as r}from"./p-1a68ac49.js";export{s as setNonce}from"./p-1a68ac49.js";const t=()=>{const r=import.meta.url;const t={};if(r!==""){t.resourcesUrl=new URL(".",r).href}return o(t)};t().then((o=>r([["p-7b4242f5",[[1,"color-contrast-checker",{language:[1],color1:[32],color2:[32]}],[1,"questionaire-form",{currentStep:[32],answerHistory:[32]}]]]],o)));
 //# sourceMappingURL=ux-components.esm.js.map
